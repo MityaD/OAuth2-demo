@@ -1,0 +1,22 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 327068287124-jaufhaue0r2i8253pun1jlh8sl6fe175.apps.googleusercontent.com
+            clientSecret: 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
+            scope:
+                - email
+                - profile
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: yakushik
+    password: yakushik
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
