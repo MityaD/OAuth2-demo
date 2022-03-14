@@ -2,6 +2,7 @@ package com.yakut.oauth2demo.model;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import java.util.Collection;
 import java.util.Map;
@@ -18,7 +19,7 @@ public class CustomOAuth2User implements OAuth2User{
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return oauth2User.getAuthorities();
+        return AuthorityUtils.createAuthorityList("ROLE_USER");
     }
 
     @Override

@@ -14,6 +14,8 @@ public class Users {
     @Id
     @Column(name = "id")
     private String id;
+    @Column(name = "role")
+    private String role;
     @Column(name = "given_name")
     private String givenName;
     @Column(name = "family_name")
